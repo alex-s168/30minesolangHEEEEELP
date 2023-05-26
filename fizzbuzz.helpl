@@ -1,0 +1,58 @@
+fun main:
+    sto(1);
+    loop();
+
+fun loop:
+    cpr(1); irp();
+        smo(3);
+        bre(0,mod3);
+    drp();
+
+    cpr(1); irp();
+        smo(5);
+        bre(0,mod5);
+    drp();
+
+    out();
+
+    next();
+
+fun mod3:
+    drp();
+
+    cpr(1); irp();
+        smo(5);
+        bre(0,mod35);
+    drp();
+
+    irp();
+        sto(Fizz);
+        out();
+    drp();
+
+    next();
+
+fun mod5:
+    drp();
+
+    irp();
+        sto(Buzz);
+        out();
+    drp();
+
+    next();
+
+fun mod35:
+    drp();
+
+    irp();
+        sto(FizzBuzz);
+        out();
+    drp();
+
+    next();
+
+fun next:
+    sad(1);
+    bne(101,loop);
+    halt();

@@ -1,0 +1,22 @@
+fun main:
+    sto(99);
+    loop();
+
+fun loop:
+    pri(); irp(); sto( bottles of beer on the wall\,); out(); drp();
+    pri(); irp(); sto( bottles of beer.); out(); drp();
+    irp(); sto(Take one down\, pass it around\,); out(); drp();
+    ssu(1);
+    pri(); irp(); sto( bottles of beer on the wall.); out(); sto(); out(); drp();
+
+    bne(1,loop);
+    bre(1,loop1);
+
+fun loop1:
+    pri(); irp(); sto( bottle of beer on the wall\,); out(); drp();
+    pri(); irp(); sto( bottle of beer.); out(); drp();
+    irp(); sto(Take one down\, pass it around\,); out(); drp();
+    ssu(1);
+    irp(); sto(No bottles of beer on the wall.); out(); sto(); out(); drp();
+
+    halt();
